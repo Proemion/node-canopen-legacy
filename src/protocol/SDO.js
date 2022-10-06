@@ -709,7 +709,7 @@ class SDO {
             this.server.buffer = Buffer.from([]);
             this.server.timer = setTimeout(
                 () => { this._serverAbort(0x05040000); },
-                100
+                10000
             );
 
             this.device.channel.send({
@@ -776,7 +776,7 @@ class SDO {
             this.server.bufferOffset = 0;
             this.server.timer = setTimeout(
                 () => { this._serverAbort(0x05040000); },
-                100
+                10000
             );
 
             this.device.channel.send({
